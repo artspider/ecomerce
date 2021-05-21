@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\Shoe;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,6 +14,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $this->call([
+            ShoeSeeder::class,
+        ]);
+        /* Shoe::create([
+            'marca' => 'Nike',
+            'modelo' => 'Lebron 2020',
+            'talla' => 28,
+            'precio' => 1800,
+            'categoria' => 'Mens',
+            'color' => 'White',
+        ]); */
     }
 }
